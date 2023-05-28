@@ -1,0 +1,22 @@
+---
+import Social from './Social.astro'
+
+const contacts = [
+  {platform: "github", username: "tachagon"},
+  {platform: "facebook", username: "tatchagon"},
+  {platform: "instagram", username: "tachagon"},
+  {platform: "linkedin", username: "in/tatchagon"},
+];
+---
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+
+<footer>
+  {contacts.map((contact) => <Social platform={contact.platform} username={contact.username} />)}
+</footer>
